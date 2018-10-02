@@ -67,5 +67,10 @@ MIFilter *filterTwo= [[MIFilter alloc]init];
 然后重写 `- (void)setVertexFragmentBufferOrTexture:(id<MTLRenderCommandEncoder>)commandEncoder ` 方法，可自定义滤镜传入参数.
 
 
+### ToDo
 
+1. 添加更多滤镜效果
+2. 添加图片读取处理功能
+3. 添加视频录制写入功能
+4. 添加Demo
 
