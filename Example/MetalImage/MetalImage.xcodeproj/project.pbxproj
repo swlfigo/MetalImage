@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CFC029021632F17001C379E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC028F21632F17001C379E /* AppDelegate.m */; };
+		2CFC029321632F17001C379E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC029221632F17001C379E /* ViewController.m */; };
+		2CFC029621632F17001C379E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CFC029421632F17001C379E /* Main.storyboard */; };
+		2CFC029821632F18001C379E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CFC029721632F18001C379E /* Assets.xcassets */; };
+		2CFC029B21632F18001C379E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CFC029921632F18001C379E /* LaunchScreen.storyboard */; };
+		2CFC029E21632F18001C379E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC029D21632F18001C379E /* main.m */; };
+		2CFC02C221632FB8001C379E /* MIHueFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC02AB21632FB8001C379E /* MIHueFilter.m */; };
+		2CFC02C321632FB8001C379E /* MISaturationFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC02AC21632FB8001C379E /* MISaturationFilter.m */; };
+		2CFC02C421632FB8001C379E /* MIFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC02AD21632FB8001C379E /* MIFilter.m */; };
+		2CFC02C521632FB8001C379E /* MIVideoCaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC02B121632FB8001C379E /* MIVideoCaptor.m */; };
+		2CFC02C621632FB8001C379E /* MIContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC02B321632FB8001C379E /* MIContext.m */; };
+		2CFC02C721632FB8001C379E /* MIProducer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC02B721632FB8001C379E /* MIProducer.m */; };
+		2CFC02C821632FB8001C379E /* MITexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC02B921632FB8001C379E /* MITexture.m */; };
+		2CFC02C921632FB8001C379E /* MIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC02BB21632FB8001C379E /* MIView.m */; };
+		2CFC02CA21632FB8001C379E /* MIDefaultFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC02BE21632FB8001C379E /* MIDefaultFilter.metal */; };
+		2CFC02CB21632FB8001C379E /* MIHueFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC02BF21632FB8001C379E /* MIHueFilter.metal */; };
+		2CFC02CC21632FB8001C379E /* MISaturationFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC02C021632FB8001C379E /* MISaturationFilter.metal */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2CFC028B21632F16001C379E /* MetalImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CFC028E21632F17001C379E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2CFC028F21632F17001C379E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2CFC029121632F17001C379E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2CFC029221632F17001C379E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2CFC029521632F17001C379E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2CFC029721632F18001C379E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CFC029A21632F18001C379E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2CFC029C21632F18001C379E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CFC029D21632F18001C379E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2CFC02A921632FB8001C379E /* MIHueFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHueFilter.h; sourceTree = "<group>"; };
+		2CFC02AA21632FB8001C379E /* MISaturationFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MISaturationFilter.h; sourceTree = "<group>"; };
+		2CFC02AB21632FB8001C379E /* MIHueFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHueFilter.m; sourceTree = "<group>"; };
+		2CFC02AC21632FB8001C379E /* MISaturationFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MISaturationFilter.m; sourceTree = "<group>"; };
+		2CFC02AD21632FB8001C379E /* MIFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIFilter.m; sourceTree = "<group>"; };
+		2CFC02AE21632FB8001C379E /* MIFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIFilter.h; sourceTree = "<group>"; };
+		2CFC02B021632FB8001C379E /* MIVideoCaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIVideoCaptor.h; sourceTree = "<group>"; };
+		2CFC02B121632FB8001C379E /* MIVideoCaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIVideoCaptor.m; sourceTree = "<group>"; };
+		2CFC02B321632FB8001C379E /* MIContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIContext.m; sourceTree = "<group>"; };
+		2CFC02B421632FB8001C379E /* MITexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MITexture.h; sourceTree = "<group>"; };
+		2CFC02B521632FB8001C379E /* MIProducer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIProducer.h; sourceTree = "<group>"; };
+		2CFC02B621632FB8001C379E /* MIConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIConsumer.h; sourceTree = "<group>"; };
+		2CFC02B721632FB8001C379E /* MIProducer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIProducer.m; sourceTree = "<group>"; };
+		2CFC02B821632FB8001C379E /* MIContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIContext.h; sourceTree = "<group>"; };
+		2CFC02B921632FB8001C379E /* MITexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MITexture.m; sourceTree = "<group>"; };
+		2CFC02BB21632FB8001C379E /* MIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIView.m; sourceTree = "<group>"; };
+		2CFC02BC21632FB8001C379E /* MIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIView.h; sourceTree = "<group>"; };
+		2CFC02BE21632FB8001C379E /* MIDefaultFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MIDefaultFilter.metal; sourceTree = "<group>"; };
+		2CFC02BF21632FB8001C379E /* MIHueFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MIHueFilter.metal; sourceTree = "<group>"; };
+		2CFC02C021632FB8001C379E /* MISaturationFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MISaturationFilter.metal; sourceTree = "<group>"; };
+		2CFC02C121632FB8001C379E /* MIMetalShaderHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIMetalShaderHeader.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CFC028821632F16001C379E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CFC028221632F16001C379E = {
+			isa = PBXGroup;
+			children = (
+				2CFC028D21632F17001C379E /* MetalImage */,
+				2CFC028C21632F16001C379E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2CFC028C21632F16001C379E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CFC028B21632F16001C379E /* MetalImage.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CFC028D21632F17001C379E /* MetalImage */ = {
+			isa = PBXGroup;
+			children = (
+				2CFC02A621632FB8001C379E /* MetalLibrary */,
+				2CFC028E21632F17001C379E /* AppDelegate.h */,
+				2CFC028F21632F17001C379E /* AppDelegate.m */,
+				2CFC029121632F17001C379E /* ViewController.h */,
+				2CFC029221632F17001C379E /* ViewController.m */,
+				2CFC029421632F17001C379E /* Main.storyboard */,
+				2CFC029721632F18001C379E /* Assets.xcassets */,
+				2CFC029921632F18001C379E /* LaunchScreen.storyboard */,
+				2CFC029C21632F18001C379E /* Info.plist */,
+				2CFC029D21632F18001C379E /* main.m */,
+			);
+			path = MetalImage;
+			sourceTree = "<group>";
+		};
+		2CFC02A621632FB8001C379E /* MetalLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				2CFC02A721632FB8001C379E /* Filters */,
+				2CFC02AF21632FB8001C379E /* Producers */,
+				2CFC02B221632FB8001C379E /* BaseClasses */,
+				2CFC02BA21632FB8001C379E /* Consumers */,
+				2CFC02BD21632FB8001C379E /* Shaders */,
+			);
+			name = MetalLibrary;
+			path = ../../../MetalLibrary;
+			sourceTree = "<group>";
+		};
+		2CFC02A721632FB8001C379E /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				2CFC02A821632FB8001C379E /* Color Processing */,
+				2CFC02AD21632FB8001C379E /* MIFilter.m */,
+				2CFC02AE21632FB8001C379E /* MIFilter.h */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		2CFC02A821632FB8001C379E /* Color Processing */ = {
+			isa = PBXGroup;
+			children = (
+				2CFC02A921632FB8001C379E /* MIHueFilter.h */,
+				2CFC02AA21632FB8001C379E /* MISaturationFilter.h */,
+				2CFC02AB21632FB8001C379E /* MIHueFilter.m */,
+				2CFC02AC21632FB8001C379E /* MISaturationFilter.m */,
+			);
+			path = "Color Processing";
+			sourceTree = "<group>";
+		};
+		2CFC02AF21632FB8001C379E /* Producers */ = {
+			isa = PBXGroup;
+			children = (
+				2CFC02B021632FB8001C379E /* MIVideoCaptor.h */,
+				2CFC02B121632FB8001C379E /* MIVideoCaptor.m */,
+			);
+			path = Producers;
+			sourceTree = "<group>";
+		};
+		2CFC02B221632FB8001C379E /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				2CFC02B321632FB8001C379E /* MIContext.m */,
+				2CFC02B421632FB8001C379E /* MITexture.h */,
+				2CFC02B521632FB8001C379E /* MIProducer.h */,
+				2CFC02B621632FB8001C379E /* MIConsumer.h */,
+				2CFC02B721632FB8001C379E /* MIProducer.m */,
+				2CFC02B821632FB8001C379E /* MIContext.h */,
+				2CFC02B921632FB8001C379E /* MITexture.m */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		2CFC02BA21632FB8001C379E /* Consumers */ = {
+			isa = PBXGroup;
+			children = (
+				2CFC02BB21632FB8001C379E /* MIView.m */,
+				2CFC02BC21632FB8001C379E /* MIView.h */,
+			);
+			path = Consumers;
+			sourceTree = "<group>";
+		};
+		2CFC02BD21632FB8001C379E /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				2CFC02BE21632FB8001C379E /* MIDefaultFilter.metal */,
+				2CFC02BF21632FB8001C379E /* MIHueFilter.metal */,
+				2CFC02C021632FB8001C379E /* MISaturationFilter.metal */,
+				2CFC02C121632FB8001C379E /* MIMetalShaderHeader.h */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CFC028A21632F16001C379E /* MetalImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CFC02A121632F18001C379E /* Build configuration list for PBXNativeTarget "MetalImage" */;
+			buildPhases = (
+				2CFC028721632F16001C379E /* Sources */,
+				2CFC028821632F16001C379E /* Frameworks */,
+				2CFC028921632F16001C379E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetalImage;
+			productName = MetalImage;
+			productReference = 2CFC028B21632F16001C379E /* MetalImage.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CFC028321632F16001C379E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Sylar;
+				TargetAttributes = {
+					2CFC028A21632F16001C379E = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 2CFC028621632F16001C379E /* Build configuration list for PBXProject "MetalImage" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2CFC028221632F16001C379E;
+			productRefGroup = 2CFC028C21632F16001C379E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CFC028A21632F16001C379E /* MetalImage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CFC028921632F16001C379E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CFC029B21632F18001C379E /* LaunchScreen.storyboard in Resources */,
+				2CFC029821632F18001C379E /* Assets.xcassets in Resources */,
+				2CFC029621632F17001C379E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CFC028721632F16001C379E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CFC029321632F17001C379E /* ViewController.m in Sources */,
+				2CFC02C621632FB8001C379E /* MIContext.m in Sources */,
+				2CFC029E21632F18001C379E /* main.m in Sources */,
+				2CFC02CB21632FB8001C379E /* MIHueFilter.metal in Sources */,
+				2CFC02CA21632FB8001C379E /* MIDefaultFilter.metal in Sources */,
+				2CFC02C821632FB8001C379E /* MITexture.m in Sources */,
+				2CFC02C221632FB8001C379E /* MIHueFilter.m in Sources */,
+				2CFC02C521632FB8001C379E /* MIVideoCaptor.m in Sources */,
+				2CFC029021632F17001C379E /* AppDelegate.m in Sources */,
+				2CFC02C721632FB8001C379E /* MIProducer.m in Sources */,
+				2CFC02C321632FB8001C379E /* MISaturationFilter.m in Sources */,
+				2CFC02CC21632FB8001C379E /* MISaturationFilter.metal in Sources */,
+				2CFC02C421632FB8001C379E /* MIFilter.m in Sources */,
+				2CFC02C921632FB8001C379E /* MIView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2CFC029421632F17001C379E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CFC029521632F17001C379E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2CFC029921632F18001C379E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CFC029A21632F18001C379E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2CFC029F21632F18001C379E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2CFC02A021632F18001C379E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2CFC02A221632F18001C379E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G583SJY324;
+				INFOPLIST_FILE = MetalImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Sylar.MetalImage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2CFC02A321632F18001C379E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G583SJY324;
+				INFOPLIST_FILE = MetalImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Sylar.MetalImage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CFC028621632F16001C379E /* Build configuration list for PBXProject "MetalImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CFC029F21632F18001C379E /* Debug */,
+				2CFC02A021632F18001C379E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CFC02A121632F18001C379E /* Build configuration list for PBXNativeTarget "MetalImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CFC02A221632F18001C379E /* Debug */,
+				2CFC02A321632F18001C379E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2CFC028321632F16001C379E /* Project object */;
+}
