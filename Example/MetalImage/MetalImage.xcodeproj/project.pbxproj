@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CCEF82C21D21E4C005B9A4C /* MIVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCEF82B21D21E4C005B9A4C /* MIVideo.m */; };
+		2CCEF82F21D23460005B9A4C /* MIMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCEF82E21D23460005B9A4C /* MIMainViewController.m */; };
+		2CCEF83321D2353F005B9A4C /* MICameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCEF83221D2353F005B9A4C /* MICameraViewController.m */; };
+		2CCEF83921D23795005B9A4C /* MIVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCEF83821D23795005B9A4C /* MIVideoViewController.m */; };
+		2CCEF83B21D238B9005B9A4C /* corgis.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2CCEF83A21D238B9005B9A4C /* corgis.mp4 */; };
 		2CFC029021632F17001C379E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC028F21632F17001C379E /* AppDelegate.m */; };
 		2CFC029321632F17001C379E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC029221632F17001C379E /* ViewController.m */; };
-		2CFC029621632F17001C379E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CFC029421632F17001C379E /* Main.storyboard */; };
 		2CFC029821632F18001C379E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CFC029721632F18001C379E /* Assets.xcassets */; };
 		2CFC029B21632F18001C379E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CFC029921632F18001C379E /* LaunchScreen.storyboard */; };
 		2CFC029E21632F18001C379E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC029D21632F18001C379E /* main.m */; };
@@ -41,12 +45,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CCEF82A21D21E4C005B9A4C /* MIVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIVideo.h; sourceTree = "<group>"; };
+		2CCEF82B21D21E4C005B9A4C /* MIVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIVideo.m; sourceTree = "<group>"; };
+		2CCEF82D21D23460005B9A4C /* MIMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIMainViewController.h; sourceTree = "<group>"; };
+		2CCEF82E21D23460005B9A4C /* MIMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIMainViewController.m; sourceTree = "<group>"; };
+		2CCEF83121D2353F005B9A4C /* MICameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MICameraViewController.h; sourceTree = "<group>"; };
+		2CCEF83221D2353F005B9A4C /* MICameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MICameraViewController.m; sourceTree = "<group>"; };
+		2CCEF83721D23795005B9A4C /* MIVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIVideoViewController.h; sourceTree = "<group>"; };
+		2CCEF83821D23795005B9A4C /* MIVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIVideoViewController.m; sourceTree = "<group>"; };
+		2CCEF83A21D238B9005B9A4C /* corgis.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = corgis.mp4; sourceTree = "<group>"; };
 		2CFC028B21632F16001C379E /* MetalImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CFC028E21632F17001C379E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2CFC028F21632F17001C379E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2CFC029121632F17001C379E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2CFC029221632F17001C379E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2CFC029521632F17001C379E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CFC029721632F18001C379E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CFC029A21632F18001C379E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CFC029C21632F18001C379E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,6 +118,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CCEF83021D23527005B9A4C /* MICamera */ = {
+			isa = PBXGroup;
+			children = (
+				2CCEF83121D2353F005B9A4C /* MICameraViewController.h */,
+				2CCEF83221D2353F005B9A4C /* MICameraViewController.m */,
+			);
+			path = MICamera;
+			sourceTree = "<group>";
+		};
+		2CCEF83421D23684005B9A4C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2CCEF83A21D238B9005B9A4C /* corgis.mp4 */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		2CCEF83621D23766005B9A4C /* MIVideo */ = {
+			isa = PBXGroup;
+			children = (
+				2CCEF83721D23795005B9A4C /* MIVideoViewController.h */,
+				2CCEF83821D23795005B9A4C /* MIVideoViewController.m */,
+			);
+			path = MIVideo;
+			sourceTree = "<group>";
+		};
 		2CFC028221632F16001C379E = {
 			isa = PBXGroup;
 			children = (
@@ -125,16 +163,20 @@
 		2CFC028D21632F17001C379E /* MetalImage */ = {
 			isa = PBXGroup;
 			children = (
+				2CCEF83621D23766005B9A4C /* MIVideo */,
+				2CCEF83421D23684005B9A4C /* Resource */,
+				2CCEF83021D23527005B9A4C /* MICamera */,
 				2CFC02A621632FB8001C379E /* MetalLibrary */,
 				2CFC028E21632F17001C379E /* AppDelegate.h */,
 				2CFC028F21632F17001C379E /* AppDelegate.m */,
 				2CFC029121632F17001C379E /* ViewController.h */,
 				2CFC029221632F17001C379E /* ViewController.m */,
-				2CFC029421632F17001C379E /* Main.storyboard */,
 				2CFC029721632F18001C379E /* Assets.xcassets */,
 				2CFC029921632F18001C379E /* LaunchScreen.storyboard */,
 				2CFC029C21632F18001C379E /* Info.plist */,
 				2CFC029D21632F18001C379E /* main.m */,
+				2CCEF82D21D23460005B9A4C /* MIMainViewController.h */,
+				2CCEF82E21D23460005B9A4C /* MIMainViewController.m */,
 			);
 			path = MetalImage;
 			sourceTree = "<group>";
@@ -191,6 +233,8 @@
 			children = (
 				2CFC02B021632FB8001C379E /* MIVideoCaptor.h */,
 				2CFC02B121632FB8001C379E /* MIVideoCaptor.m */,
+				2CCEF82A21D21E4C005B9A4C /* MIVideo.h */,
+				2CCEF82B21D21E4C005B9A4C /* MIVideo.m */,
 			);
 			path = Producers;
 			sourceTree = "<group>";
@@ -303,8 +347,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CFC029B21632F18001C379E /* LaunchScreen.storyboard in Resources */,
+				2CCEF83B21D238B9005B9A4C /* corgis.mp4 in Resources */,
 				2CFC029821632F18001C379E /* Assets.xcassets in Resources */,
-				2CFC029621632F17001C379E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +368,7 @@
 				2CFC02CB21632FB8001C379E /* MIHueFilter.metal in Sources */,
 				2CFC02CA21632FB8001C379E /* MIDefaultFilter.metal in Sources */,
 				2CFC02CE21634FCD001C379E /* MIContrastFilter.metal in Sources */,
+				2CCEF82F21D23460005B9A4C /* MIMainViewController.m in Sources */,
 				2CFC02F121635925001C379E /* MITwoInputFilter.metal in Sources */,
 				2CFC02C821632FB8001C379E /* MITexture.m in Sources */,
 				2CFC02EB2163582A001C379E /* MILuminanceThresholdFilter.m in Sources */,
@@ -339,9 +384,12 @@
 				2CFC02C321632FB8001C379E /* MISaturationFilter.m in Sources */,
 				2CFC02E2216357F8001C379E /* MIRGBFilter.m in Sources */,
 				2CFC02CC21632FB8001C379E /* MISaturationFilter.metal in Sources */,
+				2CCEF82C21D21E4C005B9A4C /* MIVideo.m in Sources */,
+				2CCEF83321D2353F005B9A4C /* MICameraViewController.m in Sources */,
 				2CFC02E52163580C001C379E /* MIExposureFilter.m in Sources */,
 				2CFC02C421632FB8001C379E /* MIFilter.m in Sources */,
 				2CFC02D721635725001C379E /* MISolarizeFilter.m in Sources */,
+				2CCEF83921D23795005B9A4C /* MIVideoViewController.m in Sources */,
 				2CFC02C921632FB8001C379E /* MIView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,14 +397,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2CFC029421632F17001C379E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2CFC029521632F17001C379E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2CFC029921632F18001C379E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
