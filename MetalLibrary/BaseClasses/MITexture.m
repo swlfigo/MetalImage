@@ -403,6 +403,9 @@
 
 - (UIImage *)imageFromMTLTexture {
     id<MTLTexture> imageTexture = self.mtlTexture;
+    if (!imageTexture) {
+        return nil;
+    }
     CGSize imageSize = CGSizeMake([imageTexture width], [imageTexture height]);
     size_t imageByteCount = imageSize.width * imageSize.height * 4;
     void *imageBytes = malloc(imageByteCount);
