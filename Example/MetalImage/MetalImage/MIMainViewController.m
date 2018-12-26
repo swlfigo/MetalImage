@@ -25,7 +25,8 @@
     [self.view addSubview:_tableView];
     
     _titles = @[@"Camera",
-                @"Video"
+                @"Video",
+                @"TwoInput"
                 ];
 }
 
@@ -58,6 +59,9 @@
             break;
         case 1:
             vc = [[NSClassFromString(@"MIVideoViewController") alloc] init];
+            break;
+        case 2:
+            vc = [[NSClassFromString(@"MIVideoTwoInputViewController") alloc] init];
             break;
         default:
             break;
