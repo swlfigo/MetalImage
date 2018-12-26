@@ -24,6 +24,7 @@
     AVAssetReaderTrackOutput *_readerAudioTrackOutput;  //音轨
     
     CFAbsoluteTime _processingStartTime;//开始处理的时间
+        
 }
 
 @end
@@ -170,9 +171,10 @@
     }
     
     if (!_videoProcessingThread) {
-        _videoProcessingThread = [[NSThread alloc] initWithTarget:self selector:@selector(runVideoProcessingThread) object:nil];
+        _videoProcessingThread = [[NSThread alloc] initWithTarget:self selector:@selector(startProcessVideo) object:nil];
         [_videoProcessingThread start];
     }
+    
     return YES;
 }
 
@@ -194,51 +196,51 @@
 }
 
 
-#pragma mark Processing Sample Buffer Motheds
+#pragma mark Start Processing Video
 
-- (void)runVideoProcessingThread {
-    @autoreleasepool {
-        [NSThread currentThread].name = @"VideoProcessingThread";
-        NSRunLoop *runloop = [NSRunLoop currentRunLoop];
-        _processingStartTime = CFAbsoluteTimeGetCurrent();
-        _decodingDidEnd = NO;
-        _shouldStopPlaying = NO;
-        if (!_videoDisplayLink) {
-            _videoDisplayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(processVideo:)];
-            [_videoDisplayLink addToRunLoop:runloop forMode:NSRunLoopCommonModes];
+-(void)startProcessVideo{
+    //子线程读取AssetTracker
+    [NSThread currentThread].name = @"MIVideoProcessingThread";
+    NSRunLoop *runloop = [NSRunLoop currentRunLoop];
+    _processingStartTime = CFAbsoluteTimeGetCurrent();
+    _decodingDidEnd = NO;
+    _shouldStopPlaying = NO;
+    if (!_videoDisplayLink) {
+        _videoDisplayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(processVideo:)];
+        [_videoDisplayLink addToRunLoop:runloop forMode:NSRunLoopCommonModes];
+    }
+    
+    while (!_decodingDidEnd && !_shouldStopPlaying && [runloop runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]]);
+    
+    if (_videoDisplayLink) {
+        [_videoDisplayLink invalidate];
+        _videoDisplayLink = nil;
+    }
+    
+    [self deleteAssetReader];
+    if (_videoProcessingThread) {
+        if (_videoProcessingThread.isExecuting) {
+            [_videoProcessingThread cancel];
         }
-        
-        while (!_decodingDidEnd && !_shouldStopPlaying && [runloop runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]]);
-        
-        if (_videoDisplayLink) {
-            [_videoDisplayLink invalidate];
-            _videoDisplayLink = nil;
-        }
-        
-        [self deleteAssetReader];
-        if (_videoProcessingThread) {
-            if (_videoProcessingThread.isExecuting) {
-                [_videoProcessingThread cancel];
-            }
-            _videoProcessingThread = nil;
-        }
-        
-        _status = MIVideoStatusWaiting;
-        _progress = 0.0;
-        
-        if (_shouldStopPlaying) {
-            [_stopCompletionCondition lock];
-            [_stopCompletionCondition signal];
-            [_stopCompletionCondition unlock];
-        }
-        
-        if (_decodingDidEnd) {
-            if (self.delegate && [self.delegate respondsToSelector:@selector(videoDidEnd:)]) {
-                [self.delegate videoDidEnd:self];
-            }
+        _videoProcessingThread = nil;
+    }
+    
+    _status = MIVideoStatusWaiting;
+    _progress = 0.0;
+    
+    if (_shouldStopPlaying) {
+        [_stopCompletionCondition lock];
+        [_stopCompletionCondition signal];
+        [_stopCompletionCondition unlock];
+    }
+    
+    if (_decodingDidEnd) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(videoDidEnd:)]) {
+            [self.delegate videoDidEnd:self];
         }
     }
 }
+
 
 - (void)processVideo:(CADisplayLink *)displaylink {
     if (_shouldStopPlaying || !_assetReader) {
@@ -249,6 +251,7 @@
         CMSampleBufferRef videoSampleBuffer = [_readerVideoTrackOutput copyNextSampleBuffer];
         if (videoSampleBuffer == NULL) {
             _decodingDidEnd = YES;
+            _shouldStopPlaying = YES;
             return;
         }
         
@@ -274,9 +277,6 @@
             [self processVideoSampleBuffer:videoSampleBuffer commandBuffer:commandBuffer];
             CMSampleBufferInvalidate(videoSampleBuffer);
             CFRelease(videoSampleBuffer);
-
-
-
         }];
     }
 }
@@ -301,34 +301,7 @@
     }
     
     CMSampleBufferRef sampleBuffer = [_readerAudioTrackOutput copyNextSampleBuffer];
-    
-    //    // Get audio format description.
-    //    CMFormatDescriptionRef formatDescription = CMSampleBufferGetFormatDescription(sampleBuffer);
-    //    const AudioStreamBasicDescription *sampleBufferASBD = CMAudioFormatDescriptionGetStreamBasicDescription(formatDescription);
-    //
-    //    if (kAudioFormatLinearPCM == sampleBufferASBD->mFormatID) {
-    //
-    //    } else {
-    //        NSLog(@"Bad format or bogus ASBD!");
-    //    }
-    //
-    //    CMItemCount sampleCount = CMSampleBufferGetNumSamples(sampleBuffer);
-    //    CMBlockBufferRef buffer = CMSampleBufferGetDataBuffer(sampleBuffer);
-    //    AudioBufferList audioBufferList;
-    //    CMSampleBufferGetAudioBufferListWithRetainedBlockBuffer(sampleBuffer,
-    //                                                            NULL,
-    //                                                            &audioBufferList,
-    //                                                            sizeof(audioBufferList),
-    //                                                            NULL,
-    //                                                            NULL,
-    //                                                            kCMSampleBufferFlag_AudioBufferList_Assure16ByteAlignment,
-    //                                                            &buffer);
-    //
-    //
-    //    for (int bufferCount = 0; bufferCount < audioBufferList.mNumberBuffers; bufferCount++) {
-    //        SInt16 *samples = (SInt16*)audioBufferList.mBuffers[sampleCount].mData;
-    //    }
-    
+
     return sampleBuffer;
 }
 
