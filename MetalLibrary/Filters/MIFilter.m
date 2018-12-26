@@ -93,6 +93,15 @@
     _renderPassDescriptor.colorAttachments[0].clearColor = _clearColor;
 }
 
+- (UIImage *)imageFromCurrentFrame {
+    __block UIImage *image;
+    [MIContext performSynchronouslyOnImageProcessingQueue:^{
+        image = [_outputTexture imageFromMTLTexture];
+    }];
+    
+    return image;
+}
+
 
 + (NSString *)vertexShaderFunction {
     static NSString *vFunction = @"MIDefaultVertexShader";
