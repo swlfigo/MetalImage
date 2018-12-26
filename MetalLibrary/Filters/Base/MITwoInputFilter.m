@@ -22,10 +22,10 @@
     if (!_inputTexture || !_secondInputTexture) {
         return;
     }
-    [commandBuffer addCompletedHandler:^(id<MTLCommandBuffer> commandBuffer) {
-        _inputTexture = nil;
-        _secondInputTexture = nil;
-    }];
+//    [commandBuffer addCompletedHandler:^(id<MTLCommandBuffer> commandBuffer) {
+//        _inputTexture = nil;
+//        _secondInputTexture = nil;
+//    }];
     
     [super renderRect:rect atTime:time commandBuffer:commandBuffer];
 }
