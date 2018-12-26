@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C25B8C421D36DB800C359C3 /* MIVideoTwoInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C25B8C321D36DB800C359C3 /* MIVideoTwoInputViewController.m */; };
 		2C25B8C721D378BD00C359C3 /* corgis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C25B8C621D378BD00C359C3 /* corgis.jpg */; };
+		2C25B8CA21D38E5200C359C3 /* akita.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C25B8C921D38E5200C359C3 /* akita.jpg */; };
 		2C73855921D3648A00DDC0CA /* MIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C73855821D3648A00DDC0CA /* MIImage.m */; };
 		2CCEF82C21D21E4C005B9A4C /* MIVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCEF82B21D21E4C005B9A4C /* MIVideo.m */; };
 		2CCEF82F21D23460005B9A4C /* MIMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCEF82E21D23460005B9A4C /* MIMainViewController.m */; };
@@ -50,6 +51,7 @@
 		2C25B8C221D36DB800C359C3 /* MIVideoTwoInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIVideoTwoInputViewController.h; sourceTree = "<group>"; };
 		2C25B8C321D36DB800C359C3 /* MIVideoTwoInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIVideoTwoInputViewController.m; sourceTree = "<group>"; };
 		2C25B8C621D378BD00C359C3 /* corgis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = corgis.jpg; sourceTree = "<group>"; };
+		2C25B8C921D38E5200C359C3 /* akita.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = akita.jpg; sourceTree = "<group>"; };
 		2C73855721D3648A00DDC0CA /* MIImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIImage.h; sourceTree = "<group>"; };
 		2C73855821D3648A00DDC0CA /* MIImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIImage.m; sourceTree = "<group>"; };
 		2CCEF82A21D21E4C005B9A4C /* MIVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIVideo.h; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		2CCEF83421D23684005B9A4C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				2C25B8C921D38E5200C359C3 /* akita.jpg */,
 				2C25B8C621D378BD00C359C3 /* corgis.jpg */,
 				2CCEF83A21D238B9005B9A4C /* corgis.mp4 */,
 			);
@@ -366,6 +369,7 @@
 				2CFC029B21632F18001C379E /* LaunchScreen.storyboard in Resources */,
 				2CCEF83B21D238B9005B9A4C /* corgis.mp4 in Resources */,
 				2CFC029821632F18001C379E /* Assets.xcassets in Resources */,
+				2C25B8CA21D38E5200C359C3 /* akita.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

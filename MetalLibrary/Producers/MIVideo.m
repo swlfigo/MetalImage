@@ -275,8 +275,11 @@
             id<MTLCommandBuffer> commandBuffer = [[MIContext defaultContext].commandQueue commandBuffer];
             commandBuffer.label = @"MIVideo";
             [self processVideoSampleBuffer:videoSampleBuffer commandBuffer:commandBuffer];
-            CMSampleBufferInvalidate(videoSampleBuffer);
-            CFRelease(videoSampleBuffer);
+            [commandBuffer addCompletedHandler:^(id<MTLCommandBuffer> commandBuffer) {
+                CMSampleBufferInvalidate(videoSampleBuffer);
+                CFRelease(videoSampleBuffer);
+            }];
+            [commandBuffer commit];
         }];
     }
 }

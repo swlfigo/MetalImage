@@ -30,7 +30,8 @@
     id<MTLCommandBuffer> commandBuffer = [[MIContext defaultContext].commandQueue commandBuffer];
     commandBuffer.label = @"MIImage";
     [self produceAtTime:kCMTimeInvalid commandBuffer:commandBuffer];
-
+    [commandBuffer commit];
+    [commandBuffer waitUntilCompleted];
 }
 
 @end

@@ -59,9 +59,33 @@
 
     [_videoCaptor addConsumer:_defaultFilter];
     [_defaultFilter addConsumer:_twoInputFilter];
-    [_inputImageSource addConsumer:_twoInputFilter];
+    
+    
+    MIFilter *scaleFilter = [[MIFilter alloc]init];
+    scaleFilter.outputFrame = CGRectMake(0,(int)((displayViewHeight - (displayViewWidth * 4.0/3)) * 0.5),displayViewWidth,(int)(displayViewWidth * 4.0/3));
+    [_inputImageSource addConsumer:scaleFilter];
+//    [scaleFilter addConsumer:_twoInputFilter];
+    
+
+    MIImage *secondImage = [[MIImage alloc]initWithUIImage:[UIImage imageNamed:@"akita.jpg"]];
+    MIFilter *scaleSecondFilter = [[MIFilter alloc]init];
+    scaleSecondFilter.outputFrame = CGRectMake(0,(int)((displayViewHeight - (displayViewWidth * 4.0/3)) * 0.5),displayViewWidth,(int)(displayViewWidth * 4.0/3));
+    [secondImage addConsumer:scaleSecondFilter];
+    
+    [scaleFilter addConsumer:_twoInputFilter];
+    [scaleSecondFilter addConsumer:_twoInputFilter];
     [_twoInputFilter addConsumer:_displayView];
-    [_videoCaptor startRunning];
+    
+    [secondImage processingImage];
+    [_inputImageSource processingImage];
+
+
+
+    
+    
+    
+//    [_twoInputFilter addConsumer:_displayView];
+//    [_videoCaptor startRunning];
 }
 
 -(void)videoCaptor:(MIVideoCaptor *)videoCaptor willOutputVideoSampleBuffer:(CMSampleBufferRef)sampleBuffer{

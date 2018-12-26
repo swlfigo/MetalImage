@@ -360,13 +360,23 @@
     if (CGRectEqualToRect(self.outputFrame, CGRectZero)) {
         self.outputFrame = CGRectMake(0, 0, _outputTexture.size.width, _outputTexture.size.height);
     }
-    id<MTLCommandBuffer> commandBuffer = [[MIContext defaultContext].commandQueue commandBuffer];
-    commandBuffer.label = @"MIVideoCaptorBuffer";
-    [self produceAtTime:CMSampleBufferGetPresentationTimeStamp(sampleBuffer) commandBuffer:commandBuffer];
+    [MIContext performSynchronouslyOnImageProcessingQueue:^{
+       
+        id<MTLCommandBuffer> commandBuffer = [[MIContext defaultContext].commandQueue commandBuffer];
+        commandBuffer.label = @"MIVideoCaptorBuffer";
+        [self produceAtTime:CMSampleBufferGetPresentationTimeStamp(sampleBuffer) commandBuffer:commandBuffer];
+        
+        [commandBuffer addCompletedHandler:^(id<MTLCommandBuffer> commandBuffer) {
+            //释放对应对象
+            CFRelease(ref);
+            CFRelease(sampleBuffer);
+        }];
+        [commandBuffer commit];
+    }];
+    
 
-    //释放对应对象
-    CFRelease(ref);
-    CFRelease(sampleBuffer);
+
+
 
 
 }
