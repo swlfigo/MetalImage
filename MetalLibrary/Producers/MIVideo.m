@@ -268,13 +268,13 @@
         }
         
         [MIContext performSynchronouslyOnImageProcessingQueue:^{
+
             id<MTLCommandBuffer> commandBuffer = [[MIContext defaultContext].commandQueue commandBuffer];
+            commandBuffer.label = @"MIVideo";
             [self processVideoSampleBuffer:videoSampleBuffer commandBuffer:commandBuffer];
-            [commandBuffer addCompletedHandler:^(id<MTLCommandBuffer> commandBuffer) {
-                CMSampleBufferInvalidate(videoSampleBuffer);
-                CFRelease(videoSampleBuffer);
-            }];
-            [commandBuffer commit];
+            CMSampleBufferInvalidate(videoSampleBuffer);
+            CFRelease(videoSampleBuffer);
+
 
 
         }];

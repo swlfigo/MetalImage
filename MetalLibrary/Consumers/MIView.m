@@ -85,7 +85,7 @@
         [commandEncoder endEncoding];
         
         [commandBuffer presentDrawable:drawable];
-//        [commandBuffer commit];
+        [commandBuffer commit];
     }
 #endif
 }

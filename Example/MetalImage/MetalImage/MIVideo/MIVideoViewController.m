@@ -9,18 +9,27 @@
 #import "MIVideoViewController.h"
 #import "MIView.h"
 #import "MIVideo.h"
-
+#import "MIFilter.h"
 @interface MIVideoViewController ()<MIVideoDelegate>
+
 @property (nonatomic,strong)MIView *displayView;
 @property (nonatomic,strong)MIVideo *sourceVideo;
 @end
 
 @implementation MIVideoViewController
 
+- (void)dealloc
+{
+    [_sourceVideo stop];
+    [_sourceVideo removeAllConsumers];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //Display
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
     _displayView = [[MIView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
@@ -33,7 +42,13 @@
     _sourceVideo = [[MIVideo alloc] initWithURL:fileURL];
     _sourceVideo.delegate = self;
     _sourceVideo.playAtActualSpeed = YES;
-    [_sourceVideo addConsumer:_displayView];
+
+    
+    MIFilter *filter = [[MIFilter alloc]init];
+    [_sourceVideo addConsumer:filter];
+    [filter addConsumer:_displayView];
+    filter.outputFrame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width * [UIScreen mainScreen].scale, [UIScreen mainScreen].bounds.size.width * [UIScreen mainScreen].scale * _sourceVideo.size.height / _sourceVideo.size.width );
+
     [_sourceVideo play];
 }
 
@@ -42,7 +57,7 @@
 }
 
 - (void)video:(MIVideo *)video willOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer{
-    NSLog(@"outputing");
+
 }
 
 @end

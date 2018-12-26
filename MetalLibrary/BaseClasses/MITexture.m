@@ -436,4 +436,10 @@ void MITextureReleaseDataCallback(void *info, const void *data, size_t size) {
     }
 }
 
+
+#pragma mark - Description
+-(NSString *)description{
+    return [NSString stringWithFormat:@"TextureSize:%@",NSStringFromCGSize(self.size)];
+}
+
 @end

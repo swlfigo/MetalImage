@@ -360,9 +360,10 @@
     if (CGRectEqualToRect(self.outputFrame, CGRectZero)) {
         self.outputFrame = CGRectMake(0, 0, _outputTexture.size.width, _outputTexture.size.height);
     }
-    
-    [self produceAtTime:CMSampleBufferGetPresentationTimeStamp(sampleBuffer) commandBuffer:[[MIContext defaultContext].commandQueue commandBuffer]];
-    
+    id<MTLCommandBuffer> commandBuffer = [[MIContext defaultContext].commandQueue commandBuffer];
+    commandBuffer.label = @"MIVideoCaptorBuffer";
+    [self produceAtTime:CMSampleBufferGetPresentationTimeStamp(sampleBuffer) commandBuffer:commandBuffer];
+
     //释放对应对象
     CFRelease(ref);
     CFRelease(sampleBuffer);

@@ -242,12 +242,12 @@
 		2CFC02B221632FB8001C379E /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
-				2CFC02B321632FB8001C379E /* MIContext.m */,
-				2CFC02B421632FB8001C379E /* MITexture.h */,
-				2CFC02B521632FB8001C379E /* MIProducer.h */,
-				2CFC02B621632FB8001C379E /* MIConsumer.h */,
-				2CFC02B721632FB8001C379E /* MIProducer.m */,
 				2CFC02B821632FB8001C379E /* MIContext.h */,
+				2CFC02B321632FB8001C379E /* MIContext.m */,
+				2CFC02B621632FB8001C379E /* MIConsumer.h */,
+				2CFC02B521632FB8001C379E /* MIProducer.h */,
+				2CFC02B721632FB8001C379E /* MIProducer.m */,
+				2CFC02B421632FB8001C379E /* MITexture.h */,
 				2CFC02B921632FB8001C379E /* MITexture.m */,
 			);
 			path = BaseClasses;
